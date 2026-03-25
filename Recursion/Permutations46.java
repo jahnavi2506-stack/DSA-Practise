@@ -35,3 +35,15 @@ class Solution {
         }
     }
 }
+
+We generate all permutations of n elements,
+so total permutations = n!.
+
+For each permutation we copy n elements,
+so time complexity = O(n × n!).
+
+We store all permutations in result,
+so space complexity = O(n × n!).
+
+Recursion stack and visited array take O(n),
+but result dominates.
