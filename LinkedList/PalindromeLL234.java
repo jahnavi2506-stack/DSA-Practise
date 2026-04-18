@@ -1,3 +1,5 @@
+Fast & Slow Pointer + Reverse Linked List
+
 class Solution {
     public boolean isPalindrome(ListNode head) {
         ListNode slow = head;
@@ -30,3 +32,10 @@ class Solution {
           return true;
     }
 }//o(n), o(1) space
+
+Brute force approach:
+Store all nodes in array/list
+Use two pointers (i, j) to check palindrome
+Logic:
+Traverse → store values in array
+Check arr[i] == arr[n-i-1]

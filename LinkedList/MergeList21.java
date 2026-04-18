@@ -1,7 +1,7 @@
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode(0);
-        ListNode current = dummy;
+        ListNode current = dummy; // To build a new list safely
 
         while(list1 != null && list2 != null) {
            if(list1.val < list2.val) {
@@ -18,3 +18,7 @@ class Solution {
          return dummy.next;
     }
 }//o(n + m) time, o(1) space - we traverse both lists once and use only a few pointers
+
+BRUTE FORCE APPROACH:
+Copy all elements into one list
+Sort the combined list

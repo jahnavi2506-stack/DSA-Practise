@@ -1,3 +1,5 @@
+Pattern recognition:- Fast & Slow Pointer (Floyd’s Cycle Detection Algorithm)
+
 public class Solution {
     public boolean hasCycle(ListNode head) {
         ListNode slow = head;

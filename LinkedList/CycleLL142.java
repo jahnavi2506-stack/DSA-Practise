@@ -1,3 +1,5 @@
+Pattern recognition:- Fast & Slow Pointer + Mathematical Insight (Floyd’s Cycle Algorithm)
+
 public class Solution {
     public ListNode detectCycle(ListNode head) {
        ListNode slow = head; 

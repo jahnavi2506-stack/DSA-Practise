@@ -1,6 +1,8 @@
 “Why not fast.next.next != null?”
 “Because we must first ensure fast and fast.next are not null before accessing fast.next.next, otherwise it can cause NullPointerException.”
 
+Pattern recognition:- Fast & Slow Pointer (Tortoise and Hare)
+
 class Solution {
     public ListNode middleNode(ListNode head) {
       ListNode slow = head;
@@ -15,3 +17,7 @@ class Solution {
 } 
 // Time complexity: O(n) - we traverse the list at most once
 // Space complexity: O(1) - we use only a few pointers, no extra space
+
+Brute force approach:
+Traverse list → count total nodes n
+Traverse again → go to n/2 index
