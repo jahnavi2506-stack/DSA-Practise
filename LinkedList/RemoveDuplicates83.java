@@ -1,3 +1,5 @@
+Sorted Linked List + Remove Duplicates
+
 no extra space -- “Because the list is sorted, duplicates are adjacent, so I can remove them in one pass.”
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {

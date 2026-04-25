@@ -1,3 +1,5 @@
+Pointer Manipulation + Iterative Rewiring
+
 class Solution {
     public ListNode reverseList(ListNode head) {
         ListNode prev = null;     // will become new head

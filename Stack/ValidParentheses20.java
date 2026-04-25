@@ -1,27 +1,46 @@
-Need last opened bracket → stack
-Need matching rule → hashmap
-Need fast operations → deque
-import java.util.Deque;
-import java.util.HashMap;   
-import java.util.Map;
-import java.util.ArrayDeque;
-class ValidParentheses20 {
+Pattern Recognition:-Order + matching problem 
+
+class Solution {
     public boolean isValid(String s) {
-        Map<Character, Character> map = new HashMap<>();
-        map.put(')', '(');
-        map.put('}', '{');
-        map.put(']', '[');
-        Deque<Character> stack = new ArrayDeque<>();
-        for (char c : s.toCharArray()) {
-            if (map.containsKey(c)) {
-                char topElement = stack.isEmpty() ? '#' : stack.pop();
-                if (topElement != map.get(c)) {
+
+        // Stack to store opening brackets
+        Stack<Character> st = new Stack<>();
+
+        // Traverse each character of the string
+        for(int i = 0; i < s.length(); i++) {
+
+            // Get current character
+            char ch = s.charAt(i);
+
+            // Step 1: If opening bracket → push to stack
+            if(ch == '(' || ch == '{' || ch == '[') {
+                st.push(ch);
+            } 
+            else {
+                // Step 2: If closing bracket but stack is empty → no match
+                if(st.isEmpty()) return false;
+
+                // Get top element (last unmatched opening bracket)
+                char top = st.peek();
+
+                // Step 3: Check mismatch conditions
+                // If current closing bracket does NOT match top opening bracket → invalid
+                if (
+                    (ch == ')' && top != '(') ||
+                    (ch == '}' && top != '{') ||
+                    (ch == ']' && top != '[')
+                ) {
                     return false;
                 }
-            } else {
-                stack.push(c);
+
+                // Step 4: If matched → remove opening bracket
+                st.pop();
             }
         }
-        return stack.isEmpty();
+
+        // Step 5: Final check
+        // If stack is empty → all brackets matched
+        // Else → some opening brackets are unmatched
+        return st.isEmpty();
     }
 }
