@@ -43,3 +43,7 @@ class Solution {
         return ans;
     }
 }
+
+We can solve Next Greater Element using both left-to-right and right-to-left traversal.
+ In left-to-right, we resolve previous elements when I find their next greater. In right-to-left, we compute answer for current element directly
+
