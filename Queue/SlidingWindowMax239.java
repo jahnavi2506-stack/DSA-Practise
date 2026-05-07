@@ -9,8 +9,6 @@ Time = O(n), Space = O(k)
 Only keep elements that have a chance to become maximum in the future
 Discard everything that is “blocked” by a bigger element coming later.
 
-import java.util.*;
-
 class Solution {
     public int[] maxSlidingWindow(int[] nums, int k) {
 

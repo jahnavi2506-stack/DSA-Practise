@@ -5,7 +5,7 @@ BruteForce:- Checking old useless data again and again,Not removing anything. Ea
 Since timestamps are strictly increasing, I use a queue to maintain a sliding window. For each ping, 
 I add the timestamp and remove all elements older than t - 3000 from the front. The queue size then gives the number of valid requests.
 
-import java.util.*;
+
 
 class RecentCounter {
 
