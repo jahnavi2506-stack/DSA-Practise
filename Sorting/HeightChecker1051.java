@@ -7,7 +7,7 @@ Space: O(n)
 
 Optimal Approach:-
 Use frequency array to generate sorted order dynamically without actual sorting, compare directly with original array while traversing frequencies.
-Time: O(n)
+Time: O(n + range) where range is constant (100 in this case)
 Space: O(1)
 
 The constraints show that heights[i] lies only between 1 and 100, which is a very small bounded range. 
@@ -49,7 +49,6 @@ class Solution {
                 freq[expected]--;
             }
         }
-
         return mismatch;
     }
 }
