@@ -1,4 +1,4 @@
-Pattern Recognition:- Array, Sorting
+Pattern Recognition:- Greedy + Sorting (Pairing Optimization, Greedy Pair Formation)
 
 Brute Force:- Generate all possible pairings using recursion/backtracking.
 For every pairing, calculate sum(min(ai, bi)) and keep maximum.
