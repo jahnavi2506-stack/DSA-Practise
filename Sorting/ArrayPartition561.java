@@ -9,8 +9,6 @@ Sort the array and pair adjacent elements: (nums[0],nums[1]), (nums[2],nums[3]).
 Add every even-indexed element because it becomes the minimum of each pair.
 Time Complexity: O(n log n) (sorting), Space Complexity: O(1) or O(log n) depending on sorting implementation.
 
-import java.util.Arrays;
-
 class Solution {
     public int arrayPairSum(int[] nums) {
 
