@@ -1,4 +1,4 @@
-Pattern Recognition:- Merge Sort based counting
+Pattern Recognition:- Merge Sort pair-counting optimization problem
 
 Brute Force Approach
 Use two loops (i, j) such that i < j.
@@ -11,3 +11,5 @@ Since both halves become sorted, count reverse pairs efficiently using two point
 If: left[i]>2*right[j] then all remaining elements after i in left half also satisfy the condition because left half is sorted.
 Time Complexity: O(nlogn), Space:O(n)
 
+Without sorting: no predictable order, cannot skip comparisons
+With sorting: pointer movement becomes monotonic, no backtracking needed, counting becomes linear during merge step
