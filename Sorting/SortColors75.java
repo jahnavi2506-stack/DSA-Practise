@@ -1,3 +1,18 @@
+Pattern Recognition: Dutch National Flag Algorithm (3-Way Partitioning)
+
+Brute Force:  Use any sorting algorithm (Arrays.sort()).
+Sort entire array normally.
+Extra work happens even though only 3 values exist.
+Time: O(n log n), Space: O(1) 
+
+Optimal Approach (Dutch National Flag)
+Maintain 3 regions:
+0 → low-1 = all 0s
+low → mid-1 = all 1s
+high+1 → end = all 2s
+Traverse once using mid and swap accordingly.
+Time: O(n) (single traversal), Space: O(1)
+
 class Solution {
     public void sortColors(int[] nums) {
 
