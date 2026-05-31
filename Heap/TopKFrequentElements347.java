@@ -7,8 +7,6 @@ k = 1
 There is a tie between 1 and 2. Since the original problem guarantees a unique answer, this case won't occur. 
 If ties were allowed, we would need clarification on how to break them
 
-import java.util.*;
-
 class Solution {
     public int[] topKFrequent(int[] nums, int k) {
 
