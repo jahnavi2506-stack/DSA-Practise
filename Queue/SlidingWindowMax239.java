@@ -41,3 +41,8 @@ class Solution {
         return result;
     }
 }
+
+Heap: Gives max in O(log k) for every insertion/removal, so total complexity becomes O(n log k).
+Deque: Maintains elements in decreasing order, so each element is added and removed at most once, giving O(n) total time.
+Therefore: We use deque because it exploits the sliding-window property and achieves O(n) instead of O(n log k) while still giving
+the maximum in O(1) from the front.
