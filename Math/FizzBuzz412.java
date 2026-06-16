@@ -1,7 +1,7 @@
 Pattern Recognition: Simulation(simply given rules are used) + Modulus + conditional Building
 
 Brute Force: Loop from 1 to n.
-Use if-else if-else to check FizzBuzz, Fizz, Buzz, or the number.
+Use if-else to check FizzBuzz, Fizz, Buzz, or the number.
 Add the corresponding string to the result list. Time: O(n), Space: O(n)
 
 Optimal: Loop from 1 to n and start with an empty string s.
