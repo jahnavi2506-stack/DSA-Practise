@@ -7,6 +7,34 @@ If all 26 letters are found, return true. Time: O(26 × n) ≈ O(n), Space: O(1)
 Optimal Approach (Boolean Array): Create a boolean array of size 26.Mark each character as seen.
 Check whether all 26 positions are marked. Time: O(n), Space: O(26) ≈ O(1)
 
+class Solution {
+    public boolean checkIfPangram(String sentence) {
+
+        // Step 1: create a boolean array for 26 letters
+        boolean[] seen = new boolean[26];
+
+        // Step 2: traverse each character in the sentence
+        for (char ch : sentence.toCharArray()) {
+
+            // map 'a' -> 0, 'b' -> 1, ..., 'z' -> 25
+            int index = ch - 'a';
+
+            // mark this letter as seen
+            seen[index] = true;
+        }
+
+        // Step 3: check if any letter is missing
+        for (boolean val : seen) {
+            if (!val) {
+                return false; // missing letter found
+            }
+        }
+
+        // all letters are present
+        return true;
+    }
+}
+
 Bitmask Approach: Use one integer's bits to represent the 26 letters.
 Turn ON the corresponding bit whenever a letter appears.
 If all 26 bits are ON, it's a pangram. Time: O(n), Space: O(1)

@@ -39,7 +39,9 @@ class Solution {
         }
 
         // Problem guarantees exactly one solution,
-        // so this line will never be reached
-        return new int[] {};
+        // create an integer array with 0 elements.so this line will never be reached
+        return new int[] {}; //Java expects array values inside {}
     }
 }
+
+i//n HashSet .add is allowed but not in HashMap so we use .put
