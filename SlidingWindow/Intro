@@ -1,0 +1,35 @@
+Create the first window
+Store the answer
+Slide the window
+Remove the outgoing element
+Add the incoming element
+Update answer
+
+Fixed Size Sliding Window - Generic Java Template
+public int slidingWindow(int[] arr, int k) {
+
+    // Step 1: Calculate sum of first window
+    int windowSum = 0;
+    for (int i = 0; i < k; i++) {
+        windowSum += arr[i];
+    }
+
+    // Step 2: Store initial answer
+    int answer = windowSum;
+
+    // Step 3: Slide the window
+    for (int i = k; i < arr.length; i++) {
+
+        // Remove outgoing element
+        windowSum -= arr[i - k];
+
+        // Add incoming element
+        windowSum += arr[i];
+
+        // Update answer
+        answer = Math.max(answer, windowSum);
+        // Use Math.min() for minimum problems
+    }
+
+    return answer;
+}
