@@ -1,3 +1,14 @@
+Pattern Recognition: Two-pointers + sorting
+
+Brute Force: Generate every possible triplet using 3 loops.
+Check if sum is 0.Use a Set to avoid duplicates.
+Time  : O(n³),Space : O(k)  // for storing unique triplets
+
+Optimal Approach:
+Sort the array. Fix one element and use two pointers on remaining array.
+Skip duplicates to avoid repeated triplets.
+Time  : O(n²), Space : O(1)   // ignoring answer list [O(n log n) + O(n²) =  O(n²)]
+
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();

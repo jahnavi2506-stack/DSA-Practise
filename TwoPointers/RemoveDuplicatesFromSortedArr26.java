@@ -10,24 +10,24 @@ Return i + 1 as the count of unique elements. Time: O(n),Space: O(1)
 class Solution {
     public int removeDuplicates(int[] nums) {
 
-        // i points to the last unique element found
-        int i = 0;
+        // j points to the position of the last unique element
+        int j = 0;
 
-        // j scans the array
-        for (int j = 1; j < nums.length; j++) {
+        // i scans the array from the second element onwards
+        for (int i = 1; i < nums.length; i++) {
 
-            // Found a new unique element
-            if (nums[j] != nums[i]) {
+            // If a new unique element is found
+            if (nums[i] != nums[j]) {
 
-                // Move i to the next position
-                i++;
+                // Move j to the next position
+                j++;
 
-                // Place the unique element there
-                nums[i] = nums[j];
+                // Place the new unique element at index j
+                nums[j] = nums[i];
             }
         }
 
-        // Number of unique elements
-        return i + 1;
+        // Number of unique elements = last index + 1
+        return j + 1;
     }
 }
