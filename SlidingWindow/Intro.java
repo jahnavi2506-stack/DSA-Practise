@@ -5,7 +5,7 @@ Remove the outgoing element
 Add the incoming element
 Update answer
 
-Fixed Size Sliding Window - Generic Java Template
+Fixed Size Sliding Window -- Generic Java Template
 public int slidingWindow(int[] arr, int k) {
 
     // Step 1: Calculate sum of first window
