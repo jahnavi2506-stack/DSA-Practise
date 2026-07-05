@@ -1,4 +1,4 @@
-Pattern Recognition:-Order + matching problem 
+Pattern Recognition:- Stack (Order + matching problem) 
 
 class Solution {
     public boolean isValid(String s) {
