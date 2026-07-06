@@ -44,4 +44,4 @@ class Solution {
     }
 }
 
-i//n HashSet .add is allowed but not in HashMap so we use .put
+in HashSet .add is allowed but not in HashMap so we use .put

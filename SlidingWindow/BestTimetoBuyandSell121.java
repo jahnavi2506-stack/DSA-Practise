@@ -1,4 +1,4 @@
-Pattern Recognition: Track Minimum + Max Difference
+ Pattern Recognition: Track Minimum + Max Difference
 
 Brute Force Approach: Try every day as a buying day. For each buying day, try every future day as a selling day.
 Keep track of maximum profit. Time: O(n²), Space: O(1)
