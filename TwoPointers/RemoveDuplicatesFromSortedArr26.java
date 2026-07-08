@@ -1,11 +1,11 @@
 Pattern Recognition: Two-pointers
 
-Brute Force:Traverse the array and store unique elements in a new list/set.Copy unique elements back into nums.
-Return count of unique elements. Time: O(n),Space: O(n)
+Brute Force: Traverse the array and store unique elements in a new list/set. Copy unique elements back into nums.
+Return count of unique elements. Time: O(n), Space: O(n)
 
 Optimal Approach: Use two pointers: i for last unique element and j for traversal.
 When nums[j] != nums[i], place it at i+1.
-Return i + 1 as the count of unique elements. Time: O(n),Space: O(1)
+Return i + 1 as the count of unique elements. Time: O(n), Space: O(1)
 
 class Solution {
     public int removeDuplicates(int[] nums) {
@@ -30,4 +30,4 @@ class Solution {
         // Number of unique elements = last index + 1
         return j + 1;
     }
-}
+} 

@@ -14,7 +14,7 @@ class Solution {
         }
         return ans;
     }
-}
+} 
 
 Optimal: Builds result using previous computed sum (prefix sum idea)
 Avoids recomputation by carrying forward running total. Time: O(n), Space: O(1)
