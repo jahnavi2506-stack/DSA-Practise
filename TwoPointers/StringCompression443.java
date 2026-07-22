@@ -1,4 +1,4 @@
-Pattern Recognition: Two-Pointers + Run Length Encoding 
+Pattern Recognition: (in-place changes) Two-Pointers + Run Length Encoding 
 
 Brute Force: Traverse the array and count consecutive repeating characters.
 Store the compressed result (char + count) in a new string/array.
