@@ -1,0 +1,5 @@
+Java is an object-oriented language, so every executable code resides inside a class. 
+public class Solution defines the class that contains the program. The main method is the entry point 
+recognized by the JVM. It is public so the JVM can access it, static so it can be invoked without 
+creating an object, void because it doesn't return a value, main because the JVM looks for this 
+exact method name, and String[] args allows command-line arguments to be passed to the program.

@@ -12,7 +12,6 @@ Optimal: Convert string into char[].
 Count #, then copy non-# characters from index hashCount.
 Fill the first hashCount positions with #. Time  : O(n), Space : O(1) extra
 
-import java.util.*;
 
 public class MoveHash {
 
