@@ -34,3 +34,6 @@ class Solution {
         return maxProfit;
     }
 }
+
+It's called Greedy because at every step, 
+we make the best decision available at that moment without looking into the future.

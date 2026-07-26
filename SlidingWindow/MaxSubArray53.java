@@ -9,30 +9,34 @@ Maintain currentSum = best subarray ending at current index.
 Maintain maxSum = best subarray found so far. Time: O(n), Space: O(1)
 
 class Solution {
-    public int maxProfit(int[] prices) {
+    public int maxSubArray(int[] nums) {
 
-        // Minimum price seen so far
-        int minPrice = prices[0];
+        // Maximum sum of a subarray ending at the current index.
+        // Initialize with the first element because the array can contain all negative numbers.
+        int currentSum = nums[0];
 
-        // Maximum profit found so far
-        int maxProfit = 0;
+        // Maximum subarray sum found so far.
+        int maxSum = nums[0];
 
-        // Traverse all prices
-        for (int i = 1; i < prices.length; i++) {
+        // Start from the second element.
+        for (int i = 1; i < nums.length; i++) {
 
-            // Update minimum buying price
-            if (prices[i] < minPrice) {
-                minPrice = prices[i];
-            } 
-            else {
-                // Profit if we sell today
-                int profit = prices[i] - minPrice;
+            /*
+             * Decide:
+             * 1. Start a new subarray from nums[i]
+             * 2. Extend the previous subarray by adding nums[i]
+             *
+             * Choose whichever gives a larger sum.
+             */
+            currentSum = Math.max(nums[i], currentSum + nums[i]);
 
-                // Update maximum profit
-                maxProfit = Math.max(maxProfit, profit);
-            }
+            /*
+             * Update the overall maximum subarray sum found so far.
+             */
+            maxSum = Math.max(maxSum, currentSum);
         }
 
-        return maxProfit;
+        // Return the maximum subarray sum.
+        return maxSum;
     }
 }
