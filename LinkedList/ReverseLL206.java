@@ -39,3 +39,6 @@ class Solution {
         return prev;
     }
 }
+“I use three pointers: prev, curr, and next. For every node, I first save curr.next so I don't lose the remaining
+list. Then I point curr.next to prev, move prev to curr, and move curr to the saved next. When curr becomes null,
+prev is the new head. The time complexity is O(N) and space complexity is O(1).

@@ -14,7 +14,6 @@ class Solution {
         // Maximum sum of a subarray ending at the current index.
         // Initialize with the first element because the array can contain all negative numbers.
         int currentSum = nums[0];
-
         // Maximum subarray sum found so far.
         int maxSum = nums[0];
 
