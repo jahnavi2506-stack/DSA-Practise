@@ -17,7 +17,7 @@ public class Solution {
              while(movePtr != slow) { 
                 movePtr = movePtr.next; 
                 slow = slow.next;
-             }
+             } 
              return movePtr; // return either movePtr or slow, both are at the start of the cycle
           }
         }

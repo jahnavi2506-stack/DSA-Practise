@@ -1,3 +1,13 @@
+Pattern Recognition:- Fast & Slow Pointer (Floyd’s Cycle Algorithm)
+
+Brute Force: First traverse the list to find its length L.
+Calculate the target position from the beginning: L - n + 1, then traverse again to delete it.
+Time: O(N), Space: O(1) — two traversals, but still linear.
+
+Optimal Approach: Create a dummy node before head, then initialize fast and slow at dummy.
+Move fast n + 1 steps to create a gap; then move both until fast == null.
+slow reaches the node before the target, so delete it using slow.next = slow.next.next. Time: O(N), Space: O(1)
+
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
        ListNode dummy = new ListNode(0);
@@ -18,9 +28,3 @@ class Solution {
         return dummy.next; 
     }
 }
-//o(m) time, o(1) space - we traverse the list at most twice and use only a few pointers
-
-BRUTE FORCE APPROACH:
-Count length L
-Find node at position (L - n)
-Delete it  //o(2N) time, o(1) space - we traverse the list twice and use only a few pointers
