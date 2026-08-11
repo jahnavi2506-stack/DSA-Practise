@@ -1,8 +1,13 @@
-Pattern Recognition:- Monotonic Stack / Stack-based expression evaluation
+Pattern Recognition:-  Stack-based expression evaluation
 
 BruteForce:- A brute force approach would repeatedly scan the tokens array and rebuild/evaluate 
 parts of the expression whenever an operator is found by locating the last two numbers manually.
 This leads to O(n²) time complexity due to repeated rescanning, and O(1) space (excluding input) since no extra structured storage is used.
+
+Optimal Approach: Traverse tokens once; push numbers onto a stack.
+For an operator, pop b and a, calculate a operator b, and push the result back.
+The final remaining stack element is the answer.
+Time: O(n) — each token is processed once, Space: O(n) — stack can contain up to n operands/results.
 
 We use equals() because in Java, == checks memory reference, not actual string content. 
 Since tokens are Strings created dynamically, we must compare values using equals().
@@ -58,3 +63,9 @@ class Solution {
         return st.pop();
     }
 }
+"Why not b - a?"
+
+Answer:
+
+“Because RPN preserves operand order. The second-last element is the first operand and the top element is 
+the second operand, so the operation must always be a operator b.

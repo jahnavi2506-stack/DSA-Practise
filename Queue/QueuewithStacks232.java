@@ -3,7 +3,7 @@ Pattern Recognition: Data structure simulation using two stacks to reverse order
 Brute Force:
 Every pop/peek: move all elements from stack1 → stack2, do operation, then move back
 Time: O(n) per operation, Space: O(n)
- Optimal
+Optimal:
 Use two stacks: push into stack1, and only transfer to stack2 when needed (lazy transfer)
 Amortized Time: O(1), Space: O(n)
 
