@@ -43,3 +43,6 @@ class Solution {
         return maxArea;
     }
 }
+The area is limited by the shorter line. If I move the taller line, the width decreases while the shorter line 
+remains unchanged, so the limiting height cannot increase. Therefore, moving the taller line cannot produce a 
+better area. We move the shorter line because only then can the limiting height potentially increase.

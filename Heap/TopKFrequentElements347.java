@@ -83,3 +83,8 @@ class Solution {
         return result;
     }
 }
+I use a Min Heap of size k because whenever the heap exceeds k elements, I need to remove the element with the 
+smallest frequency. A Min Heap gives me that element in O(log k).
+
+O(n log n): Work depends on all n elements, like sorting the entire array.
+O(n log k): Work depends on k (only the top k elements), so it's faster when k << n.
