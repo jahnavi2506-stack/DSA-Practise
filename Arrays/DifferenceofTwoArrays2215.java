@@ -44,3 +44,6 @@ class Solution {
         return result;
     }
 }
+I used ArrayList to store the elements that are present only in each array because the size of the result is not
+known beforehand. ArrayList provides dynamic resizing and allows efficient insertion at the end using add(), which 
+is O(1) amortized

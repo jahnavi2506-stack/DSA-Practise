@@ -44,3 +44,8 @@ class Solution {
         return candidate;
     }
 }
+
+Boyer-Moore Majority Vote Algorithm is an algorithm used to find an element that appears more than n/2 times. It 
+maintains a candidate and a count. When the current element matches the candidate, the count increases; otherwise, 
+it decreases. When the count becomes zero, a new candidate is selected. Since the majority element has more 
+occurrences than all other elements combined, it survives the cancellation process.

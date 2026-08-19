@@ -32,15 +32,26 @@ class Solution {
                      Two-pointer
 class Solution {
     public int removeDuplicates(int[] nums) {
-      
-       int i = 0;
-       for(int j = 1; j < nums.length; j++){
-        if(nums[i] != nums[j]) {
-            i++;
-           nums[i] = nums[j];
+
+        // i points to the position of the last unique element
+        int i = 0;
+
+        // j scans the array to find new unique elements
+        for (int j = 1; j < nums.length; j++) {
+
+            // If nums[j] is different, we found a new unique value
+            if (nums[i] != nums[j]) {
+
+                // Move i to the next position for the unique value
+                i++;
+
+                // Store the new unique value
+                nums[i] = nums[j];
+            }
         }
-       } 
-       return i + 1;
+
+        // i is an index, so number of unique elements = i + 1
+        return i + 1;
     }
-}//o(n),o(1)
+}
 According to constraints, length is at least 1. If it was guaranteed.
