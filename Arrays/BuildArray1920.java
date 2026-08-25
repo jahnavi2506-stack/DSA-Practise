@@ -6,7 +6,6 @@ Traverse the array once. Time: O(n) | Space: O(n)
 Optimal Approach: Encode both values as nums[i] + (nums[nums[i]] % n) * n.
 % n gets the old value; / n later extracts the new value. Time: O(n) | Space: O(1)
 
-//1920
 // class Solution {                                                                        
 //     public int[] buildArray(int[] nums) {
 //       int n = nums.length;
