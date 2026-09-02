@@ -11,8 +11,7 @@ Increment j; after traversal, all zeros automatically move to the end. Time: O(n
 class Solution {
     public void moveZeroes(int[] nums) {
 
-        // j points to the position where the next non-zero
-        // element should be placed
+        // j points to the position where the next non-zero element should be placed
         int j = 0;
 
         // Traverse the entire array using i
