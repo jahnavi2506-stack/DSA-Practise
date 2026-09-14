@@ -1,4 +1,15 @@
-//557
+Pattern Recognition: Two-pointer
+
+Brute Force: Split the string using spaces to get individual words.
+Reverse each word separately using another loop/StringBuilder, then join all words with spaces.
+This is easy to understand but creates multiple intermediate objects.
+Complexity: O(n) time, O(n) extra space.
+
+Optimal Approach: Convert the string into a char[], then scan from left to right.
+Whenever we encounter a space or end of string, reverse the word between wordStart and i - 1.
+All words are reversed directly inside the same array, then convert the array back to a String.
+Complexity: O(n) time, O(n) space in Java; algorithmically the working array is O(n).
+
 class Solution {
     public String reverseWords(String s) {
         char[] arr = s.toCharArray();   // Convert string to char array
@@ -13,7 +24,7 @@ class Solution {
                     char temp = arr[left];
                     arr[left] = arr[right];
                     arr[right] = temp;
-                   left++;
+                    left++;
                     right--;
                 }
                 wordStart = i + 1; // Move start to next word
@@ -23,4 +34,6 @@ class Solution {
     }
 }     
 //o(n),o(n)
-//“I convert the string into a char array and use two pointers to reverse each word whenever I hit a space or the end of the string. This gives O(n) time complexity.” Strict O(1) extra space is impossible in Java because String is immutable. But this is considered optimal.
+//“I convert the string into a char array and use two pointers to reverse each word whenever I hit a space or the 
+// end of the string. This gives O(n) time complexity.” Strict O(1) extra space is impossible in Java because String 
+// is immutable. But this is considered optimal.

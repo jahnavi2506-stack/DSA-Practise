@@ -43,4 +43,3 @@ class Solution {
 
         return fast == 1;
     }
-}

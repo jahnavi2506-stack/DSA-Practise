@@ -11,24 +11,66 @@ Reverse each individual word. Time: O(n), Space: O(1)
 class Solution {
     public String reverseWords(String s) {
 
-        // Remove leading/trailing spaces and split
-        // words wherever there are one or more spaces
-        String[] words = s.trim().split("\\s+");
+        // Convert string to character array because String is immutable
+        char[] arr = s.toCharArray();
 
-        // StringBuilder to construct the reversed result
-        StringBuilder result = new StringBuilder();
+        // Remove extra spaces and get the valid length
+        int n = 0;
+        int i = 0;
 
-        // Traverse words from right to left
-        for (int i = words.length - 1; i >= 0; i--) {
+        while (i < arr.length) {
 
-            // Add a single space between words
-            if (result.length() > 0) {
-                result.append(" ");
+            // Skip leading and multiple spaces
+            while (i < arr.length && arr[i] == ' ') {
+                i++;
             }
 
-            result.append(words[i]);
+            // Copy the word
+            while (i < arr.length && arr[i] != ' ') {
+                arr[n++] = arr[i++];
+            }
+
+            // Add only one space between words
+            if (i < arr.length) {
+                arr[n++] = ' ';
+            }
         }
 
-        return result.toString();
+        // Remove the extra space at the end
+        if (n > 0) {
+            n--;
+        }
+
+        // Reverse the entire valid portion
+        reverse(arr, 0, n - 1);
+
+        // Reverse each individual word
+        int start = 0;
+
+        for (int end = 0; end <= n; end++) {
+
+            // Word ends when we find a space or reach the end
+            if (end == n || arr[end] == ' ') {
+                reverse(arr, start, end - 1);
+                start = end + 1;
+            }
+        }
+
+        // Create result using only the valid portion
+        return new String(arr, 0, n);
+    }
+
+    // Helper method to reverse characters between left and right
+    private void reverse(char[] arr, int left, int right) {
+
+        while (left < right) {
+
+            char temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+
+            left++;
+            right--;
+        }
     }
 }
