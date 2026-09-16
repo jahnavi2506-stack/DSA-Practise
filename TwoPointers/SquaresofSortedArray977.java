@@ -1,7 +1,7 @@
 Pattern Recognition: Two-pointers
 
 Brute Force Approach: Traverse the array and square every element.
-Sort the squared array. Return the sorted array. Time: O(n log n),Space: O(1) (excluding sorting space)
+Sort the squared array. Return the sorted array. Time: O(n log n),Space: O(n) 
 
 class Solution {
     public int[] sortedSquares(int[] nums) {
