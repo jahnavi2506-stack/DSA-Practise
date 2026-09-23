@@ -1,6 +1,6 @@
 //HackerRank
 
-Pattern Recognition: Pattern: Array Rotation / Circular Array.
+Pattern Recognition: Array Rotation / Circular Array.
 Left rotate by d → split at index d.
 Final order = [d → n-1] + [0 → d-1].
 
