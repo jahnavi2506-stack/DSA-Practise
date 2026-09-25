@@ -53,3 +53,10 @@ class Solution {
         }
     }
 }
+
+The Dutch National Flag (DNF) algorithm is a one-pass, in-place partitioning algorithm used when an array contains
+three categories of elements and we want to arrange those categories in a particular order.
+
+mid - current element to inspect
+low - where the next 0 should go
+high - where the next 2 should go
