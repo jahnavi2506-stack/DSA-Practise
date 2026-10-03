@@ -21,6 +21,7 @@ class Solution {
 
         // Stores: number -> index
         HashMap<Integer, Integer> map = new HashMap<>();
+        //List<int[]> result = new ArrayList<>(); //allows multiple pairs to be stored in a list of arrays
 
         // Traverse the array once
         for (int i = 0; i < nums.length; i++) {
@@ -31,7 +32,8 @@ class Solution {
             // If complement already exists,
             // we found the pair
             if (map.containsKey(complement)) {
-                return new int[] { map.get(complement), i };
+                return new int[] { map.get(complement), i };//only 1 valid pair
+                //result.add(new int[] { map.get(complement), i }); allows multiple pairs to be stored in a list of arrays
             }
 
             // Store current number and its index
@@ -45,3 +47,5 @@ class Solution {
 }
 
 in HashSet .add is allowed but not in HashMap so we use .put
+Need to find a number's index? Use map.put(nums[i], i).
+Need to find the number at a given index? Use map.put(i, nums[i]).
